@@ -1,5 +1,9 @@
 # Python. Basic tasks
 
+## lab_01
+* GPS time roll over
+* ISBN with missing number
+
 ## lab_02
 * The Temperature Converter
 * The Electricity Tariff Calculator
