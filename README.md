@@ -18,3 +18,6 @@
 * The Password Validator
 * The Armstrong Number Checker
 * String Compression
+
+## lab_05
+* Analyse number in a loop if it's prime, perfect or armstrong
