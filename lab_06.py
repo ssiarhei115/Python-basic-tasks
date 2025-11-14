@@ -1,25 +1,30 @@
 def count_symbol(s:str)->str:
-    """ Count the quantity of each number in a sequence """
+    """ Modify the input string so that each symbol is preceded with a symbol's counter """
     
     t = s[0]
-    c = 0
+    count = 0
     result = ''
     
     for item in s:
         if item == t:
-            c += 1
+            count += 1
         else:
-            result += str(c) + t
+            result += str(count) + t
             t = item
-            c = 1
+            count = 1
             
-    result += str(c) + t 
+    result += str(count) + t 
     
     return result
 
 
 def inp_validator(s:str)->bool:
-    """ Validate the input """
+    """ Validate the input string """
+    
+    # check for non zero input length
+    # check if length of input < 30 (for the safety purpose)
+    if len(s) == 0 or len(s) > 30:
+        return False
     
     # check if entered symbols can be converted to type int
     try:
@@ -29,40 +34,41 @@ def inp_validator(s:str)->bool:
     except:
         check_1 = False
     
-    # check if length of input > 0
-    check_2 = len(s) > 0
-        
-    return check_1 and check_2 
+    # check for non zero first character
+    check_2 = s[0] != '0'
+
+    return check_1 and check_2
 
 
 # main function
-def count_symbol_loop(step=10):
-    """Modify input string with symbols counter. Loop request
+def count_symbol_loop(iter=10):
+    """ Loop request for new input. Modify the input string with symbols counters. 
 
     Args:
-        step (int, optional): number of iterrations. Defaults to 10
+        iter (int, optional): number of iterrations. Defaults to 10
     Returns:
-        string: modified string after every iterration (step)
+        string: modified string with symbols counters after each iterration
     """
        
     while True:
-        inp_1 = input('New look-and-say sequence? (y/n):').strip()
+        inp_1 = input('New try for look-and-say sequence? (y/n):').strip()
         
         if inp_1 != 'y':
             print('EXIT')
             break
         else:
-            inp_2 = input ('Number to start (int > 0):')
+            inp_2 = input ('Number to start (int > 0):').strip()
             
             if not inp_validator(inp_2):
-                print('CHECK the input! USE integer numbers > 0, at least ONE number is required!!')
+                print(70*'-', '\n!! CHECK THE INPUT !!\nUSE integer numbers > 0, at least ONE character is required!!\n', 70*'-')
                 continue
             
-            print(f'Start number: {inp_2}')
+            print(f'Start number {inp_2} is VALID')
             
-        for n in range(step):
+        for n in range(iter):
             inp_2 = count_symbol(inp_2)
             print(f'{n} -', inp_2)
+        print('*')        
         
         
 count_symbol_loop()
