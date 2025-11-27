@@ -41,7 +41,7 @@ def inp_validator(s:str)->bool:
 
 
 # main function
-def count_symbol_loop(iter=10):
+def count_symbol_loop(iter=9):
     """ Loop request for new input. Modify the input string with symbols counters. 
 
     Args:
