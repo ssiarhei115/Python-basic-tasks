@@ -7,7 +7,7 @@
 * OOP: Random numbers generator
 
 ## 08
-* OOP: Normalizing Values after User Input
+* OOP: Normalizing values after user Input
 
 ## 07
 * OOP: Ohm's law and Watt
@@ -19,19 +19,19 @@
 * Analyse number in a loop if it's prime, perfect or armstrong
 
 ## 04
-* Password Validator
-* Armstrong Number Checker
-* String Compression
+* Password validator
+* Armstrong number checker
+* String compression
 
 ## 03
-* Temperature Converter
-* Prime Number Checker
-* Perfect Number Finder
+* Temperature converter
+* Prime number checker
+* Perfect number finder
 
 ## 02
-* Temperature Converter
-* Electricity Tariff Calculator
-* Time Duration Converter
+* Temperature converter
+* Electricity tariff calculator
+* Time duration converter
 
 ## 01
 * GPS time roll over
